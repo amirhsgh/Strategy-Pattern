@@ -9,7 +9,7 @@ class NoDiscount(DiscountStrategy):
 # Implement other discount strategies too.
 class SeasonalDiscount(DiscountStrategy):
     def apply_discount(self, price: int, context: ShoppingContext):
-        if context.season == Season.WINTER_SEASON:
+        if context.season == Season.WINTER:
             return price - (price * (10/100))
         
         return price
